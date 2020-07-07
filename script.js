@@ -19,6 +19,8 @@ function quizopening() {
 }
 quizopening();
 
+///Timer function
+
 var timeemaining;
 var totaltimegiven = 100;
 var timer = document.getElementById("timer");
@@ -32,19 +34,22 @@ function countdown() {
             totaltimegiven = 0;
             timer.textContent = "Times up"
             postquiz();
+
         }
+        
 
 
     }, 1000);
 }
 
+//Function to add score
 
 var score = 0
 function correct() {
     score += 20
 }
 
-
+// function to subtract 15 seconds when question is answered incorrectly.
 
 function wrong() {
     totaltimegiven -=15;
@@ -57,7 +62,7 @@ var a2;
 var a3;
 var a4;
 
-//Question 1 layout.
+//Questions 
 function question1() {
     beginQuiz.remove();
     countdown();
@@ -101,7 +106,7 @@ function question1() {
     });
 }
 
-//Question 2 layout.
+
 function question2() {
     a1.remove();
     a2.remove();
@@ -146,7 +151,7 @@ function question2() {
     });
 }
 
-//Question 3 layout.
+
 function question3() {
     a1.remove();
     a2.remove();
@@ -191,7 +196,7 @@ function question3() {
     });
 }
 
-//Question 4 layout.
+
 function question4() {
     a1.remove();
     a2.remove();
@@ -220,7 +225,7 @@ function question4() {
     a3 = document.createElement("BUTTON");
     a3.innerHTML = "Object";
     document.body.children[4].appendChild(a3);
-    a3.addEventListener("join", function () {
+    a3.addEventListener("click", function () {
         
         question5();
         wrong();
@@ -229,14 +234,14 @@ function question4() {
     a4 = document.createElement("BUTTON");
     a4.innerHTML = "None of these";
     document.body.children[4].appendChild(a4);
-    a4.addEventListener("map()", function () {
+    a4.addEventListener("click", function () {
         
         question5();
         wrong();
     });
 }
 
-//Question 5 layout.
+
 function question5() {
     a1.remove();
     a2.remove();
@@ -286,10 +291,10 @@ function question5() {
 var highscore = document.getElementById("textarea")
 
 function postquiz() {
-    correct();
     
+    timer.remove();
     
-    a1.remove();
+    a1.remove(); 
     a2.remove();
     a3.remove();
     a4.remove();
@@ -310,14 +315,12 @@ function postquiz() {
 var mainText = document.getElementById("maintextarea");
 var banner = document.getElementById("banner");
 
-//High score page layout.
-function scorepage() {
-    
 
+function scorepage() {
     submitButton.remove();
     
     highscore.style.visibility = "hidden";
-    banner.textContent = "High Scores"
+    banner.textContent = "Scores"
     
     mainText.textContent = localStorage.getItem("user") + ": " + localStorage.getItem("score");
     
