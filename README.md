@@ -1,5 +1,6 @@
 # Code_Quiz
 Test your knowledge about code fundamentals.
+https://sabedi571.github.io/Code_Quiz/
 
 I created this brief quiz to present my javascript knowledge and its various functions.
 
