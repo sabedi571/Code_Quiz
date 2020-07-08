@@ -42,12 +42,7 @@ function countdown() {
     }, 1000);
 }
 
-//Function to add score
 
-var score = 0
-function correct() {
-    score += 20
-}
 
 // function to subtract 15 seconds when question is answered incorrectly.
 
@@ -66,7 +61,7 @@ var a4;
 function question1() {
     beginQuiz.remove();
     countdown();
-    question.textContent = "Which built-in method returns the character at the specified index?";
+    question.textContent = "Q1-) Which built-in method returns the character at the specified index?";
         
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "characterAt()";
@@ -112,7 +107,7 @@ function question2() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "Which built-in method reverses the order of the elements of an array?";
+    question.textContent = "Q2-) Which built-in method reverses the order of the elements of an array?";
        
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "changeOrder(order)";
@@ -157,7 +152,7 @@ function question3() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "Which of the following function of String object causes a string to be displayed in a small font, as if it were in a <small> tag?";
+    question.textContent = "Q3-) Which of the following function of String object causes a string to be displayed in a small font, as if it were in a <small> tag?";
        
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "Link()";
@@ -202,7 +197,7 @@ function question4() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?";
+    question.textContent = "Q4-) Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?";
        
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "push()";
@@ -247,7 +242,7 @@ function question5() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "Which of the following function of String object is used to find a match between a regular expression and a string, and to replace the matched substring with a new substring?";
+    question.textContent = "Q5-) Which of the following function of String object is used to find a match between a regular expression and a string, and to replace the matched substring with a new substring?";
        
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "concat()";
@@ -286,8 +281,11 @@ function question5() {
         
     });
 }
-
-
+///function to add score
+var score = 0
+function correct() {
+    score += 20;
+}
 var highscore = document.getElementById("textarea")
 
 function postquiz() {
@@ -299,7 +297,7 @@ function postquiz() {
     a3.remove();
     a4.remove();
     textArea.style.visibility = "visible";
-    question.textContent = "Quiz Complete! Your score is " + score + "%. Please enter your initials below."
+    question.textContent = "Quiz Complete! Your score is " +score+ "%. Please enter your initials below."
     
     submitButton = document.createElement("BUTTON");
     submitButton.innerHTML = "Submit";
@@ -310,6 +308,7 @@ function postquiz() {
         scorepage();
     });
 }
+
 
 
 var mainText = document.getElementById("maintextarea");
