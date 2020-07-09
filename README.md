@@ -22,7 +22,14 @@ I used button createElement functions to create button in my javascript code.
 
 I used setInterval function to create timer and clear interval to stop the timer when the quiz is over.
 
-i used a remove element to remove buttons as we proceed with the quiz.
+i used a remove element to remove buttons as we proceed with the quiz and create new buttons simaltaneoulsy. 
+
+I called a simple wrong and correct function to subtract time and add score at the end.
+
+Each time you select an answer either correct or wrong function is initiated to add score or reduce time from the quiz. 
+
+I called postquiz function to put my initials and score to local storage so i can recall it later at the score page.
+
 
 
 
